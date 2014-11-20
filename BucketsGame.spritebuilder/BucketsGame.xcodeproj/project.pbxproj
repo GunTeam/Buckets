@@ -94,6 +94,7 @@
 		B78A0B10198AF87200C63841 /* Published-Android in Resources */ = {isa = PBXBuildFile; fileRef = B78A0B0F198AF87200C63841 /* Published-Android */; };
 		BA283BA21A1DB3120077E700 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = BA283BA11A1DB3120077E700 /* Ball.m */; };
 		BA283BA51A1DB31B0077E700 /* Bucket.m in Sources */ = {isa = PBXBuildFile; fileRef = BA283BA41A1DB31B0077E700 /* Bucket.m */; };
+		BA283BA81A1DB5920077E700 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BA283BA71A1DB5920077E700 /* GameScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +235,8 @@
 		BA283BA11A1DB3120077E700 /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
 		BA283BA31A1DB31B0077E700 /* Bucket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bucket.h; sourceTree = "<group>"; };
 		BA283BA41A1DB31B0077E700 /* Bucket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bucket.m; sourceTree = "<group>"; };
+		BA283BA61A1DB5920077E700 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		BA283BA71A1DB5920077E700 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		D352B48019EC608A00829775 /* MetalShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalShaders; path = Source/MetalShaders; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -575,6 +578,8 @@
 			children = (
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
+				BA283BA61A1DB5920077E700 /* GameScene.h */,
+				BA283BA71A1DB5920077E700 /* GameScene.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -899,6 +904,7 @@
 				BA283BA21A1DB3120077E700 /* Ball.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
+				BA283BA81A1DB5920077E700 /* GameScene.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
