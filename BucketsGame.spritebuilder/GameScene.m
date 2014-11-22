@@ -7,12 +7,15 @@
 //
 
 #import "GameScene.h"
+#import "UITouch+CC.h"
 
 float ballDropInterval = 1;
 
 @implementation GameScene
 
 -(void) didLoadFromCCB{
+    
+    self.userInteractionEnabled = true;
     
     CGRect screenBound = [[UIScreen mainScreen] bounds];
     CGSize screenSize = screenBound.size;
@@ -21,18 +24,27 @@ float ballDropInterval = 1;
     
     CCLOG(@"game scene loaded");
     physicsNode = [[CCPhysicsNode alloc]init];
-    physicsNode.gravity = CGPointMake(0, -30);
+    physicsNode.gravity = CGPointMake(0, -300);
     [self addChild:physicsNode z:1];
     physicsNode.collisionDelegate = self;
     
-    Bucket *bucket = (Bucket *)[CCBReader load:@"Bucket"];
-    bucket.position = CGPointMake(screenWidth/2, screenHeight/2);
-    [physicsNode addChild:bucket];
+//    ball = (Ball *)[CCBReader load:@"Ball"];
+//    ball.position = CGPointMake(screenWidth/2, screenHeight/2);
+//    ball.physicsBody.affectedByGravity = false;
+//    [physicsNode addChild:ball];
     
-    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Jorrie" fontName:@"Arial" fontSize:12];
-    label.color = [CCColor colorWithCcColor3b:ccBLACK];
-    label.position = bucket.position;
-    [self addChild:label];
+//    bucket = (Bucket *)[CCBReader load:@"Bucket"];
+//    bucket.position = CGPointMake(screenWidth/2, screenHeight/4);
+//    [physicsNode addChild:bucket];
+    
+    springBucket = (SpringBucket *)[CCBReader load:@"RopeBucket"];
+    springBucket.position = CGPointMake(screenWidth/2, screenHeight/2);
+    [physicsNode addChild:springBucket];
+    
+
+    
+    
+    physicsNode.debugDraw = true;
     
     [self schedule:@selector(ballDrop:) interval:ballDropInterval];
     
@@ -40,9 +52,19 @@ float ballDropInterval = 1;
 
 -(void) ballDrop:(CCTime)dt{
     Ball *ball = (Ball *)[CCBReader load:@"Ball"];
-    ball.position = CGPointMake(160, 530);
+    ball.position = CGPointMake((int)(arc4random()%((int)screenWidth - 50)+25), screenHeight +25);
     [physicsNode addChild:ball];
 
+}
+
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
+    CGPoint touchLocation = [touch locationInNode:self];
+    springBucket.position = CGPointMake((touchLocation.x - springBucket.position.x)*.15 + springBucket.position.x, springBucket.position.y);
+}
+
+-(void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event{
+    CGPoint touchLocation = [touch locationInNode:self];
+    springBucket.position = CGPointMake((touchLocation.x - springBucket.position.x)*.15 + springBucket.position.x, springBucket.position.y);
 }
 
 @end

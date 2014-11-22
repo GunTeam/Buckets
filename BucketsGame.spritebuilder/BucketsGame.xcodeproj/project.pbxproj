@@ -95,6 +95,9 @@
 		BA283BA21A1DB3120077E700 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = BA283BA11A1DB3120077E700 /* Ball.m */; };
 		BA283BA51A1DB31B0077E700 /* Bucket.m in Sources */ = {isa = PBXBuildFile; fileRef = BA283BA41A1DB31B0077E700 /* Bucket.m */; };
 		BA283BA81A1DB5920077E700 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BA283BA71A1DB5920077E700 /* GameScene.m */; };
+		BA283BC41A1F1E620077E700 /* SpringBucket.m in Sources */ = {isa = PBXBuildFile; fileRef = BA283BC31A1F1E620077E700 /* SpringBucket.m */; };
+		BA283BCD1A1FC4260077E700 /* SpringJoint.m in Sources */ = {isa = PBXBuildFile; fileRef = BA283BCC1A1FC4260077E700 /* SpringJoint.m */; };
+		BA283C0B1A1FDCEC0077E700 /* Rope.m in Sources */ = {isa = PBXBuildFile; fileRef = BA283C0A1A1FDCEC0077E700 /* Rope.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +240,12 @@
 		BA283BA41A1DB31B0077E700 /* Bucket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bucket.m; sourceTree = "<group>"; };
 		BA283BA61A1DB5920077E700 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		BA283BA71A1DB5920077E700 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		BA283BC21A1F1E620077E700 /* SpringBucket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringBucket.h; sourceTree = "<group>"; };
+		BA283BC31A1F1E620077E700 /* SpringBucket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBucket.m; sourceTree = "<group>"; };
+		BA283BCB1A1FC4260077E700 /* SpringJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringJoint.h; sourceTree = "<group>"; };
+		BA283BCC1A1FC4260077E700 /* SpringJoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringJoint.m; sourceTree = "<group>"; };
+		BA283C091A1FDCEC0077E700 /* Rope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rope.h; sourceTree = "<group>"; };
+		BA283C0A1A1FDCEC0077E700 /* Rope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rope.m; sourceTree = "<group>"; };
 		D352B48019EC608A00829775 /* MetalShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalShaders; path = Source/MetalShaders; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -591,6 +600,12 @@
 				BA283BA11A1DB3120077E700 /* Ball.m */,
 				BA283BA31A1DB31B0077E700 /* Bucket.h */,
 				BA283BA41A1DB31B0077E700 /* Bucket.m */,
+				BA283BC21A1F1E620077E700 /* SpringBucket.h */,
+				BA283BC31A1F1E620077E700 /* SpringBucket.m */,
+				BA283BCB1A1FC4260077E700 /* SpringJoint.h */,
+				BA283BCC1A1FC4260077E700 /* SpringJoint.m */,
+				BA283C091A1FDCEC0077E700 /* Rope.h */,
+				BA283C0A1A1FDCEC0077E700 /* Rope.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -900,12 +915,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA283BC41A1F1E620077E700 /* SpringBucket.m in Sources */,
 				BA283BA51A1DB31B0077E700 /* Bucket.m in Sources */,
 				BA283BA21A1DB3120077E700 /* Ball.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
 				BA283BA81A1DB5920077E700 /* GameScene.m in Sources */,
+				BA283C0B1A1FDCEC0077E700 /* Rope.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
+				BA283BCD1A1FC4260077E700 /* SpringJoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

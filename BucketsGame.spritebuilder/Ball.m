@@ -11,4 +11,9 @@
 
 @implementation Ball
 
+-(void) didLoadFromCCB{
+    self.physicsBody.collisionMask = @[@"SpringBucket",@"Ball"];
+    self.physicsBody.collisionCategories = @[@"Ball"];
+}
+
 @end
