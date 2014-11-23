@@ -10,7 +10,12 @@
 #import "cocos2d.h"
 
 @interface Ball : CCSprite {
+    CCSprite *_redBall,*_orangeBall,*_purpleBall,*_blueBall;
     
+    int ballColor;
 }
+
+-(void)setBallColor:(int)color;
+-(int)getBallColor;
 
 @end

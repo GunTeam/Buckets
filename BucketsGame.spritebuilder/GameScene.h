@@ -12,6 +12,7 @@
 #import "Ball.h"
 #import "Rope.h"
 #import "SpringBucket.h"
+#import "Alert.h"
 
 @interface GameScene : CCNode <CCPhysicsCollisionDelegate> {
     CCPhysicsNode *physicsNode;
@@ -20,6 +21,8 @@
     SpringBucket *springBucket;
     
     CGFloat screenWidth,screenHeight;
+    
+    NSMutableArray *ballSet;
 }
 
 @end

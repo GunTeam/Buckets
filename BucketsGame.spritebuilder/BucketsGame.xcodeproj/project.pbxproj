@@ -98,6 +98,7 @@
 		BA283BC41A1F1E620077E700 /* SpringBucket.m in Sources */ = {isa = PBXBuildFile; fileRef = BA283BC31A1F1E620077E700 /* SpringBucket.m */; };
 		BA283BCD1A1FC4260077E700 /* SpringJoint.m in Sources */ = {isa = PBXBuildFile; fileRef = BA283BCC1A1FC4260077E700 /* SpringJoint.m */; };
 		BA283C0B1A1FDCEC0077E700 /* Rope.m in Sources */ = {isa = PBXBuildFile; fileRef = BA283C0A1A1FDCEC0077E700 /* Rope.m */; };
+		BABA226F1A2194C300B2F39D /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = BABA226E1A2194C300B2F39D /* Alert.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -246,6 +247,8 @@
 		BA283BCC1A1FC4260077E700 /* SpringJoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringJoint.m; sourceTree = "<group>"; };
 		BA283C091A1FDCEC0077E700 /* Rope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rope.h; sourceTree = "<group>"; };
 		BA283C0A1A1FDCEC0077E700 /* Rope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rope.m; sourceTree = "<group>"; };
+		BABA226D1A2194C300B2F39D /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
+		BABA226E1A2194C300B2F39D /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
 		D352B48019EC608A00829775 /* MetalShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalShaders; path = Source/MetalShaders; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -606,6 +609,8 @@
 				BA283BCC1A1FC4260077E700 /* SpringJoint.m */,
 				BA283C091A1FDCEC0077E700 /* Rope.h */,
 				BA283C0A1A1FDCEC0077E700 /* Rope.m */,
+				BABA226D1A2194C300B2F39D /* Alert.h */,
+				BABA226E1A2194C300B2F39D /* Alert.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -921,6 +926,7 @@
 				B73789871807631A0076A88C /* main.m in Sources */,
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
 				BA283BA81A1DB5920077E700 /* GameScene.m in Sources */,
+				BABA226F1A2194C300B2F39D /* Alert.m in Sources */,
 				BA283C0B1A1FDCEC0077E700 /* Rope.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 				BA283BCD1A1FC4260077E700 /* SpringJoint.m in Sources */,

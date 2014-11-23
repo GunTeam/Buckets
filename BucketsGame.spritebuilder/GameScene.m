@@ -9,7 +9,7 @@
 #import "GameScene.h"
 #import "UITouch+CC.h"
 
-float ballDropInterval = 1;
+float ballDropInterval = 2;
 
 @implementation GameScene
 
@@ -28,23 +28,11 @@ float ballDropInterval = 1;
     [self addChild:physicsNode z:1];
     physicsNode.collisionDelegate = self;
     
-//    ball = (Ball *)[CCBReader load:@"Ball"];
-//    ball.position = CGPointMake(screenWidth/2, screenHeight/2);
-//    ball.physicsBody.affectedByGravity = false;
-//    [physicsNode addChild:ball];
-    
-//    bucket = (Bucket *)[CCBReader load:@"Bucket"];
-//    bucket.position = CGPointMake(screenWidth/2, screenHeight/4);
-//    [physicsNode addChild:bucket];
-    
     springBucket = (SpringBucket *)[CCBReader load:@"RopeBucket"];
     springBucket.position = CGPointMake(screenWidth/2, screenHeight/2);
     [physicsNode addChild:springBucket];
-    
-
-    
-    
-    physicsNode.debugDraw = true;
+        
+    physicsNode.debugDraw = false;
     
     [self schedule:@selector(ballDrop:) interval:ballDropInterval];
     
@@ -53,8 +41,15 @@ float ballDropInterval = 1;
 -(void) ballDrop:(CCTime)dt{
     Ball *ball = (Ball *)[CCBReader load:@"Ball"];
     ball.position = CGPointMake((int)(arc4random()%((int)screenWidth - 50)+25), screenHeight +25);
+    int ballColor = arc4random() % 4;
+    [ball setBallColor:ballColor];
     [physicsNode addChild:ball];
-
+    
+    Alert *alert = (Alert *) [CCBReader load:@"Alert"];
+    alert.position = CGPointMake(ball.position.x, screenHeight - 25);
+    [alert setAlertColor:ballColor];
+    [self addChild:alert];
+    
 }
 
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{

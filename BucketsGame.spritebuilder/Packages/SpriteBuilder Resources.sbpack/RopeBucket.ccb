@@ -998,7 +998,7 @@
 					<string>EnabledFloat</string>
 					<key>value</key>
 					<array>
-						<real>25.048343658447266</real>
+						<real>38.409572601318359</real>
 						<false/>
 					</array>
 				</dict>
@@ -1009,7 +1009,7 @@
 					<string>EnabledFloat</string>
 					<key>value</key>
 					<array>
-						<real>25.048343658447266</real>
+						<real>38.409572601318359</real>
 						<false/>
 					</array>
 				</dict>
@@ -1121,7 +1121,7 @@
 					<string>EnabledFloat</string>
 					<key>value</key>
 					<array>
-						<real>25.12811279296875</real>
+						<real>38.301910400390625</real>
 						<false/>
 					</array>
 				</dict>
@@ -1132,7 +1132,7 @@
 					<string>EnabledFloat</string>
 					<key>value</key>
 					<array>
-						<real>25.12811279296875</real>
+						<real>38.301910400390625</real>
 						<false/>
 					</array>
 				</dict>
@@ -1165,7 +1165,7 @@
 				<key>physicsBody</key>
 				<dict>
 					<key>affectedByGravity</key>
-					<true/>
+					<false/>
 					<key>allowsRotation</key>
 					<true/>
 					<key>bodyShape</key>
@@ -1307,7 +1307,7 @@
 				<key>physicsBody</key>
 				<dict>
 					<key>affectedByGravity</key>
-					<true/>
+					<false/>
 					<key>allowsRotation</key>
 					<true/>
 					<key>bodyShape</key>
@@ -1449,7 +1449,7 @@
 				<key>physicsBody</key>
 				<dict>
 					<key>affectedByGravity</key>
-					<true/>
+					<false/>
 					<key>allowsRotation</key>
 					<true/>
 					<key>bodyShape</key>
@@ -1591,7 +1591,7 @@
 				<key>physicsBody</key>
 				<dict>
 					<key>affectedByGravity</key>
-					<true/>
+					<false/>
 					<key>allowsRotation</key>
 					<true/>
 					<key>bodyShape</key>
@@ -1733,7 +1733,7 @@
 				<key>physicsBody</key>
 				<dict>
 					<key>affectedByGravity</key>
-					<true/>
+					<false/>
 					<key>allowsRotation</key>
 					<true/>
 					<key>bodyShape</key>
@@ -2148,8 +2148,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.45348635315895081</real>
-							<real>-104.88478088378906</real>
+							<real>0.45348626375198364</real>
+							<real>-123.88478088378906</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>0</integer>
@@ -2173,8 +2173,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.60000002384185791</real>
-							<real>0.60000002384185791</real>
+							<real>1</real>
+							<real>1</real>
 							<true/>
 							<integer>0</integer>
 						</array>
@@ -2223,8 +2223,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -2244,7 +2242,7 @@
 				<key>physicsBody</key>
 				<dict>
 					<key>affectedByGravity</key>
-					<true/>
+					<false/>
 					<key>allowsRotation</key>
 					<true/>
 					<key>bodyShape</key>
@@ -2386,7 +2384,7 @@
 				<key>physicsBody</key>
 				<dict>
 					<key>affectedByGravity</key>
-					<true/>
+					<false/>
 					<key>allowsRotation</key>
 					<true/>
 					<key>bodyShape</key>
@@ -2509,6 +2507,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
