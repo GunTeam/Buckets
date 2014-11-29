@@ -13,16 +13,21 @@
 
 -(void)didLoadFromCCB{
     disposeCounter = 0;
-    [self schedule:@selector(blink:) interval:.4];
+    [self schedule:@selector(blinkOn:) interval:.4];
+    [self schedule:@selector(blinkOff:) interval:.6];
 }
 
--(void) blink:(CCTime)dt {
-    if (disposeCounter ==3) {
+-(void) blinkOn:(CCTime)dt {
+    if (disposeCounter ==4) {
         [self  removeFromParent];
     }
     disposeCounter ++;
     
-    self.visible = !self.visible;
+    self.visible = true;
+}
+
+-(void) blinkOff:(CCTime)dt{
+    self.visible = false;
 }
 
 -(void)setAlertColor:(int)color{
