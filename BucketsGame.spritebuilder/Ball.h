@@ -12,10 +12,14 @@
 @interface Ball : CCSprite {
     CCSprite *_redBall,*_orangeBall,*_purpleBall,*_blueBall;
     
+    bool emit;
+    CGFloat screenWidth,screenHeight;
+    
     int ballColor;
 }
 
 -(void)setBallColor:(int)color;
 -(int)getBallColor;
+-(void)emitParticles;
 
 @end

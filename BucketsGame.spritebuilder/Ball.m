@@ -14,15 +14,44 @@
 -(void) didLoadFromCCB{
     self.physicsBody.collisionMask = @[@"SpringBucket",@"Ball"];
     self.physicsBody.collisionCategories = @[@"Ball"];
+    self.physicsBody.collisionType = @"ball";
     
     self.physicsBody.affectedByGravity = false;
     
     [self scheduleOnce:@selector(dropMe:) delay:2];
+        
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    CGSize screenSize = screenBound.size;
+    screenWidth = screenSize.width;
+    screenHeight = screenSize.height;
+
+    
+    emit = true;
     
 }
 
 -(void) dropMe:(CCTime)dt{
     self.physicsBody.affectedByGravity = true;
+}
+
+-(void)emitParticles{
+    if (emit) {
+        emit = false;
+        CCNode *particles;
+        if (ballColor == 0) {
+            particles = [CCBReader load:@"BlueParticles"];
+        } else if (ballColor == 1){
+            particles = [CCBReader load:@"OrangeParticles"];
+        } else if (ballColor == 2){
+            particles = [CCBReader load:@"PurpleParticles"];
+        } else {
+            particles = [CCBReader load:@"RedParticles"];
+        }
+        particles.scale = .15;
+        particles.opacity = .5;
+        particles.position = CGPointMake(self.position.x, self.position.y);
+        [self.parent addChild:particles];
+    }
 }
 
 -(void) setBallColor:(int)color{

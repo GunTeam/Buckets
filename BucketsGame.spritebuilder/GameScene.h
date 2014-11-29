@@ -8,16 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "Bucket.h"
 #import "Ball.h"
 #import "Rope.h"
 #import "SpringBucket.h"
 #import "Alert.h"
+#import "Bucket.h"
 
 @interface GameScene : CCNode <CCPhysicsCollisionDelegate> {
     CCPhysicsNode *physicsNode;
     
-    Bucket *bucket;
     SpringBucket *springBucket;
     
     CGFloat screenWidth,screenHeight;

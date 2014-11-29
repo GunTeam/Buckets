@@ -22,6 +22,12 @@ float ballDropInterval = 2;
     screenWidth = screenSize.width;
     screenHeight = screenSize.height;
     
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        screenWidth = screenWidth/2;
+        screenHeight = screenHeight/2;
+    }
+    
     CCLOG(@"game scene loaded");
     physicsNode = [[CCPhysicsNode alloc]init];
     physicsNode.gravity = CGPointMake(0, -300);
@@ -31,11 +37,25 @@ float ballDropInterval = 2;
     springBucket = (SpringBucket *)[CCBReader load:@"RopeBucket"];
     springBucket.position = CGPointMake(screenWidth/2, screenHeight/2);
     [physicsNode addChild:springBucket];
+    
+    ballSet = [[NSMutableArray alloc]init];
         
     physicsNode.debugDraw = false;
     
     [self schedule:@selector(ballDrop:) interval:ballDropInterval];
-    
+    [self schedule:@selector(checkBalls:) interval:.25];
+}
+
+-(void)emit:(CCTime)dt {
+    CCNode *particles;
+    particles = [CCBReader load:@"BlueParticles"];
+    particles.position = CGPointMake(screenWidth/2, screenHeight/2);
+    particles.scale = .2;
+    [physicsNode addChild:particles];
+}
+
+-(void) checkBalls :(CCTime)dt{
+    NSLog([NSString stringWithFormat:@"nmber of balls in set = %ul",[ballSet count]]);
 }
 
 -(void) ballDrop:(CCTime)dt{
@@ -44,6 +64,8 @@ float ballDropInterval = 2;
     int ballColor = arc4random() % 4;
     [ball setBallColor:ballColor];
     [physicsNode addChild:ball];
+    [ballSet addObject:ball];
+    NSInteger ballNum = [ballSet count];
     
     Alert *alert = (Alert *) [CCBReader load:@"Alert"];
     alert.position = CGPointMake(ball.position.x, screenHeight - 25);
@@ -60,6 +82,12 @@ float ballDropInterval = 2;
 -(void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event{
     CGPoint touchLocation = [touch locationInNode:self];
     springBucket.position = CGPointMake((touchLocation.x - springBucket.position.x)*.15 + springBucket.position.x, springBucket.position.y);
+}
+
+- (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair ball:(Ball *)ball bucket:(Bucket *)bucket {
+    
+    [ball emitParticles];
+    return true;
 }
 
 @end

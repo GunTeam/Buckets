@@ -13,9 +13,8 @@
 
 -(void) didLoadFromCCB{
     
-    _bucket.physicsBody.collisionCategories = @[@"SpringBucket"];
     _ball.physicsBody.collisionCategories = @[@"SpringBall"];
-    _bucket.physicsBody.collisionMask = @[@"Ball"];
+
 
 }
 
